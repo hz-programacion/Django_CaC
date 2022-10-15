@@ -8,10 +8,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/31f38c55fe.js" crossorigin="anonymous"></script>
     <title>{% block titulo %}Document{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/productos/publica/css/style.css'%}?v={% now 'U' %}">    
+
+    {% block css %}{% endblock css %}
+
 </head>
 
-<body>
-    <nav class="p-3 bg-dark text-white">
+<body  style="background-color: #000; color: #fffff0;">
+    <nav class="p-3  text-white" style="border-bottom: 0.1px solid #e4dbce;">
         <div class="container">
           <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
             <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
@@ -46,7 +51,7 @@
 
     </main>
 
-    <footer class="bg-light text-center text-white">
+    <footer class="text-center pt-5">
         <!-- Grid container -->
         <div class="container p-4 pb-0">
           <!-- Section: Social media -->
@@ -117,8 +122,8 @@
       </footer>
     
 
-    {% block javascrip %}
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    {% endblock javascrip %}
+    {% block javascrip %}{% endblock javascrip %}
   </body>
 </html>
