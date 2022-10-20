@@ -1,0 +1,13 @@
+.banner{
+    background-image: url('/static/img/dancer-2015159_960_720.jpg');
+    background-size: cover;
+    /*min-height: 85vh;*/
+    width: 100%;
+   
+    z-index: -999;
+}
+
+.h1-banner, .text-banner{
+    color:#FFF;
+    
+}
